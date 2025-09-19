@@ -1,16 +1,16 @@
 # Chat2Substack
 
-A production-ready pipeline that converts ChatGPT conversations into professional Substack draft content. Built with a judge-driven quality system, anchor-based extraction, and decision-centric summarization to ensure high-quality, publication-ready content.
+A Proof of Concept (PoC) personal efficiency tool that converts ChatGPT conversations into professional Substack draft content. Built with a judge-driven quality system, anchor-based extraction, and decision-centric summarization to streamline content creation workflows.
 
 ## Purpose
 
-Chat2Substack solves the problem of transforming raw AI conversations into polished, professional content suitable for publication. It addresses key challenges:
+Chat2Substack is a personal efficiency tool designed to streamline the process of transforming AI conversations into structured content. It addresses common workflow challenges:
 
-- **Content Quality**: Ensures output meets professional standards with 80/100+ quality scores
+- **Content Quality**: Provides structured output with quality scoring for personal review
 - **Privacy Protection**: Local PII redaction prevents sensitive information leakage
-- **Content Structure**: Transforms conversational data into structured, narrative content
+- **Content Structure**: Transforms conversational data into organized, narrative content
 - **Type Specialization**: Automatically detects and optimizes for different content types
-- **Production Readiness**: Generates publication-ready Markdown with proper formatting
+- **Workflow Efficiency**: Generates draft content that can be refined and published
 
 ## Architecture
 
@@ -337,16 +337,26 @@ Trigger manually with:
 4. Ensure all tests pass
 5. Submit a pull request
 
+## Disclaimer
+
+**This is a Proof of Concept (PoC) personal efficiency tool. It is not production-ready software and should not be used for commercial purposes. The tool is provided as-is for personal experimentation and learning purposes.**
+
+### Important Notes:
+- Generated content should always be reviewed before publication
+- The tool may produce inaccurate or incomplete content
+- No warranty or support is provided
+- Use at your own risk
+
 ## License
 
 MIT License - see LICENSE file for details.
 
 ## Current Status
 
-✅ **Production Ready Features:**
+✅ **PoC Features Implemented:**
 - **Judge-Driven Quality System**: 0-100 scoring with hard fail detection
 - **Anchor-Based Extraction**: 50%+ coverage with comprehensive referencing
-- **Decision-Centric Technical Journal**: Professional engineering narratives
+- **Decision-Centric Technical Journal**: Engineering narrative generation
 - **Content Type Detection**: Automatic categorization with confidence scoring
 - **Self-Play Improvement**: One-retry enhancement for failed content
 - **PII Redaction**: Local, deterministic privacy protection
@@ -354,24 +364,32 @@ MIT License - see LICENSE file for details.
 - **CI/CD Pipeline**: Automated testing and artifact generation
 
 ✅ **Content Types Supported:**
-- **Technical Journal** (Production Ready): Engineering decision extraction, 80/100 pass rate, 54.3% anchor coverage
-- **Research Article** (Production Ready): Academic-style summarization with anchor-based extraction, 60/100 pass rate
-- **Critique** (Production Ready): Opinion and analysis with balanced perspective, 60/100 pass rate
+- **Technical Journal** (PoC Complete): Engineering decision extraction, 80/100 pass rate, 54.3% anchor coverage
+- **Research Article** (PoC Complete): Academic-style summarization with anchor-based extraction, 60/100 pass rate
+- **Critique** (PoC Complete): Opinion and analysis with balanced perspective, 60/100 pass rate
 
-### 🎯 **Technical Achievements**
+### 🎯 **PoC Technical Achievements**
 
 - **Quality System**: Judge-driven validation with 0-100 scoring and hard fail detection
 - **Anchor Coverage**: 50%+ conversation element referencing for comprehensive content extraction
-- **Pass Rate**: 80/100+ quality threshold for production-ready content
+- **Pass Rate**: 80/100+ quality threshold for technical journals
 - **Content Types**: 3 specialized summarizers with automatic routing
 - **Testing Coverage**: Golden set, synthetic benchmark, and mutation testing
 - **Self-Play**: One-retry improvement system for failed content
 - **Privacy**: Local PII redaction with deterministic patterns
 - **Performance**: 1,400+ word technical journals with full section completeness
 
+### ⚠️ **PoC Limitations**
+
+- **Personal Use Only**: Not designed for production or commercial use
+- **Experimental**: Some features may be unstable or incomplete
+- **Local Processing**: Requires local setup and configuration
+- **Manual Review**: Generated content should be reviewed before publication
+- **Limited Support**: Community-driven development with no formal support
+
 ## Next Steps
 
-### 🚀 **Production Optimization**
+### 🔧 **PoC Enhancement**
 
 **1. Content Type Completion**
 - [x] **Research Article**: ✅ Anchor-based extraction and validation implemented
@@ -382,7 +400,7 @@ MIT License - see LICENSE file for details.
 **2. Quality Enhancement**
 - [x] **Golden Set Testing**: ✅ Curated test conversations with expected outputs implemented
 - [x] **Coverage Analysis**: ✅ Comprehensive content extraction validation implemented
-- [ ] **Professional Review**: Human evaluation of output quality
+- [ ] **User Feedback Integration**: Incorporate user feedback for improvement
 - [ ] **A/B Testing**: Compare different summarizer approaches
 
 **3. Performance Optimization**
@@ -391,19 +409,19 @@ MIT License - see LICENSE file for details.
 - [ ] **Caching**: Implement intelligent caching for repeated content
 - [ ] **Parallel Processing**: Multi-threaded content processing
 
-### 🔄 **CI/CD Enhancement**
+### 🔄 **Development Enhancement**
 
-**1. Automated Testing Pipeline**
+**1. Testing Pipeline**
 - [x] **Multi-Content Type Testing**: ✅ Test all summarizer types in CI implemented
 - [x] **Quality Metrics Validation**: ✅ Enforce minimum quality thresholds implemented
 - [x] **Regression Testing**: ✅ Prevent quality degradation over time implemented
 - [ ] **Performance Benchmarking**: Track processing speed and resource usage
 
-**2. Continuous Integration Features**
+**2. Development Features**
 - [x] **Automated Content Generation**: ✅ Generate sample posts for each content type implemented
 - [ ] **Quality Dashboard**: Visual metrics and coverage reports
 - [x] **Artifact Management**: ✅ Organized storage of generated content implemented
-- [ ] **Deployment Automation**: Automated publishing to test environments
+- [ ] **Development Automation**: Streamlined development workflows
 
 **3. Testing Infrastructure**
 - [x] **Test Data Management**: ✅ Curated conversation datasets implemented
@@ -416,6 +434,7 @@ MIT License - see LICENSE file for details.
 - [ ] Local LLM integration (Ollama, etc.)
 - [ ] Image and OG generation
 - [ ] Topic segmentation
-- [ ] Builder Sentry dashboard
 - [ ] Multi-language support
 - [ ] Advanced content analysis
+- [ ] User interface improvements
+- [ ] Batch processing capabilities
