@@ -23,41 +23,41 @@ Input → Ingest → Redact → Analyze → Route → Summarize → Judge → Re
 ### System Components
 
 #### 1. **Input Processing** (`src/ingest/`)
-- **HTML Parser**: Extracts conversation structure from ChatGPT shared links
-- **Text Parser**: Handles manual text input with role detection
-- **Content Normalization**: Standardizes conversation format across input types
+- **HTML Parser**: Extracts conversation structure from ChatGPT shared links by parsing the embedded JavaScript data and converting it to a normalized conversation format. Handles the complex HTML structure that ChatGPT uses to store conversation data.
+- **Text Parser**: Handles manual text input with intelligent role detection using patterns like "User:", "Assistant:", "Q:", "A:" to identify speaker turns and maintain conversation flow.
+- **Content Normalization**: Standardizes conversation format across different input types, ensuring consistent data structure for downstream processing regardless of input source.
 
 #### 2. **Privacy Protection** (`src/redact/`)
-- **PII Detection**: Identifies emails, phones, addresses, and private names
-- **Deterministic Redaction**: Consistent replacement patterns for privacy
-- **Public Figure Preservation**: Maintains references to public individuals
+- **PII Detection**: Uses regex patterns and heuristics to identify emails, phone numbers, addresses, SSNs, and private names. Implements sophisticated pattern matching to catch various formats and edge cases.
+- **Deterministic Redaction**: Applies consistent replacement patterns (e.g., `[email-redacted]`, `[phone-redacted]`) to ensure privacy while maintaining text readability and structure.
+- **Public Figure Preservation**: Maintains references to well-known public individuals while redacting private personal information, using configurable whitelists and heuristics.
 
 #### 3. **Content Analysis** (`src/analysis/`)
-- **Anchor Extraction**: Identifies key concepts, decisions, commands, and citations
-- **Signal Detection**: Extracts technical, academic, and opinion indicators
-- **Coverage Analysis**: Measures content extraction completeness
+- **Anchor Extraction**: Identifies and extracts key concepts, engineering decisions, commands, citations, and other important elements from conversations. Uses pattern matching, keyword detection, and context analysis to build a comprehensive knowledge graph of the conversation.
+- **Signal Detection**: Extracts technical, academic, and opinion indicators to help determine content type and appropriate summarization approach. Analyzes language patterns, terminology, and discourse markers.
+- **Coverage Analysis**: Measures how comprehensively the content extraction captures the original conversation, providing metrics on what percentage of important elements are referenced in the final output.
 
 #### 4. **Intelligent Routing** (`src/routing/`)
-- **Content Type Detection**: Automatically categorizes conversations
-- **Confidence Scoring**: Provides reliability metrics for classification
-- **Fallback Logic**: Handles ambiguous content with abstain mechanisms
+- **Content Type Detection**: Automatically categorizes conversations into technical journal, research article, critique, or other types using keyword analysis, pattern matching, and confidence scoring. Implements tie-breaking logic for ambiguous cases.
+- **Confidence Scoring**: Provides reliability metrics for classification decisions, allowing the system to abstain from processing when confidence is too low or content is too ambiguous.
+- **Fallback Logic**: Handles ambiguous content with abstain mechanisms, ensuring the system doesn't force inappropriate content types when the conversation doesn't clearly fit established patterns.
 
 #### 5. **Specialized Summarization** (`src/llm/`)
-- **Technical Journal**: Decision-centric engineering narratives
-- **Research Article**: Academic-style analysis with methodology
-- **Critique**: Balanced opinion and argument structure
-- **Self-Play Improvement**: One-retry enhancement for failed content
+- **Technical Journal**: Generates decision-centric engineering narratives that focus on key technical decisions, their rationale, evidence, and outcomes. Structures content around engineering decision logs, technical stack, challenges, and results.
+- **Research Article**: Creates academic-style analysis with methodology sections, research questions, findings, and discussion. Emphasizes evidence-based conclusions and scholarly presentation.
+- **Critique**: Produces balanced opinion and argument structure with thesis statements, supporting arguments, counterpoints, and stakes analysis. Maintains objective tone while presenting subjective viewpoints.
+- **Self-Play Improvement**: Implements one-retry enhancement for failed content by analyzing judge feedback and attempting to address specific quality issues through content expansion or structural improvements.
 
 #### 6. **Quality Validation** (`src/validate/`)
-- **Judge System**: 0-100 scoring with hard fail detection
-- **Section Completeness**: Ensures required content sections
-- **Anchor Coverage**: Validates comprehensive content extraction
-- **Evidence Density**: Measures substantiation quality
+- **Judge System**: Implements comprehensive 0-100 scoring with hard fail detection based on multiple criteria including section completeness, anchor coverage, evidence density, and content quality. Provides detailed feedback on why content passes or fails.
+- **Section Completeness**: Ensures required content sections are present and properly formatted, checking for TL;DR, decision logs, commands, and other content-type-specific requirements.
+- **Anchor Coverage**: Validates that a sufficient percentage (50%+) of conversation elements are referenced in the final output, ensuring comprehensive content extraction.
+- **Evidence Density**: Measures the substantiation quality of claims and decisions, ensuring the output is well-supported rather than purely speculative.
 
 #### 7. **Output Generation** (`src/render/`)
-- **Markdown Rendering**: Clean, Substack-optimized formatting
-- **HTML Conversion**: Web-ready content with proper structure
-- **Metadata Generation**: Quality scores, coverage metrics, and processing stats
+- **Markdown Rendering**: Produces clean, Substack-optimized formatting with proper headers, lists, code blocks, and citations. Ensures compatibility with Substack's markdown parser and display requirements.
+- **HTML Conversion**: Converts markdown to web-ready HTML with proper structure, styling, and accessibility considerations. Maintains formatting consistency across different display contexts.
+- **Metadata Generation**: Creates comprehensive metadata including quality scores, coverage metrics, processing statistics, and content type information for tracking and analysis purposes.
 
 ### Quality Assurance System
 
