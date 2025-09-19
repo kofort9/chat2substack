@@ -1,0 +1,53 @@
+{
+  "name": "AI Ethics Research Analysis",
+  "description": "Test case for research article summarizer using AI ethics discussion",
+  "content_type": "research_article",
+  "expected_metrics": {
+    "has_title": true,
+    "has_dek": true,
+    "has_tldr": true,
+    "has_tags": true,
+    "has_body": true,
+    "title_valid": true,
+    "dek_valid": true,
+    "tldr_valid": true,
+    "tags_valid": true,
+    "body_word_count_valid": true,
+    "has_sections": true
+  },
+  "messages": [
+    {
+      "role": "user",
+      "content": "I'm researching the ethical implications of AI development and deployment. What are the key areas I should focus on for a comprehensive analysis?"
+    },
+    {
+      "role": "assistant",
+      "content": "Excellent research topic! The ethical implications of AI span several critical areas: 1) Bias and fairness in algorithmic decision-making, 2) Privacy and data protection concerns, 3) Transparency and explainability of AI systems, 4) Accountability and responsibility for AI decisions, 5) Economic impact and job displacement, 6) Safety and alignment with human values."
+    },
+    {
+      "role": "user",
+      "content": "What does the current research show about bias in AI systems? Are there specific studies I should reference?"
+    },
+    {
+      "role": "assistant",
+      "content": "Research on AI bias is extensive and growing. Key findings include: 1) Multiple studies show AI systems can perpetuate and amplify existing societal biases, 2) Research by Bolukbasi et al. (2016) demonstrated gender bias in word embeddings, 3) Studies by Buolamwini and Gebru (2018) revealed racial bias in facial recognition systems, 4) Recent research shows bias can emerge from training data, algorithm design, and deployment contexts."
+    },
+    {
+      "role": "user",
+      "content": "What about the economic impact? What does the data show about job displacement versus job creation?"
+    },
+    {
+      "role": "assistant",
+      "content": "The economic impact research presents a complex picture: 1) Studies suggest AI will both displace and create jobs, with estimates varying widely, 2) Research by Frey and Osborne (2017) estimated 47% of US jobs at risk of automation, 3) More recent studies suggest the impact may be more gradual and nuanced, 4) Evidence shows AI is creating new job categories while transforming existing ones, 5) The net effect depends on factors like industry, skill level, and policy responses."
+    },
+    {
+      "role": "user",
+      "content": "What are the current regulatory approaches being studied? Are there any promising frameworks emerging?"
+    },
+    {
+      "role": "assistant",
+      "content": "Regulatory research is rapidly evolving: 1) The EU's AI Act represents the most comprehensive regulatory framework currently proposed, 2) Research suggests risk-based approaches are gaining traction, 3) Studies on algorithmic auditing and impact assessment are emerging, 4) Research on international cooperation and harmonization is growing, 5) Evidence-based policymaking approaches are being developed to balance innovation with protection."
+    }
+  ],
+  "title_hint": "AI Ethics Research: Current Findings and Implications"
+}

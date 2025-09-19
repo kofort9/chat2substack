@@ -1,0 +1,34 @@
+{
+  "test_cases": [
+    {
+      "id": "sentry_technical_journal",
+      "name": "Sentry Technical Journal",
+      "conversation_file": "sentry_conversation.html",
+      "expected_output_file": "sentry_expected.json",
+      "content_type": "technical_journal",
+      "description": "Complex technical conversation about building Sentry project with multiple technologies",
+      "expected_metrics": {
+        "min_word_coverage": 15.0,
+        "min_topic_coverage": 10.0,
+        "min_technical_term_coverage": 60.0,
+        "min_solutions_included": 70.0,
+        "min_questions_addressed": 80.0
+      }
+    },
+    {
+      "id": "summarizer_improvement_discussion",
+      "name": "Summarizer Improvement Discussion",
+      "conversation_file": "summarizer_improvement.html",
+      "expected_output_file": "summarizer_improvement_expected.json",
+      "content_type": "research_article",
+      "description": "Short discussion about improving summarizer capabilities",
+      "expected_metrics": {
+        "min_word_coverage": 200.0,
+        "min_topic_coverage": 50.0,
+        "min_technical_term_coverage": 80.0,
+        "min_solutions_included": 90.0,
+        "min_questions_addressed": 100.0
+      }
+    }
+  ]
+}

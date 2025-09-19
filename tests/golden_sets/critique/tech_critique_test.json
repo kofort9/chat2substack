@@ -1,0 +1,53 @@
+{
+  "name": "Technology Critique Analysis",
+  "description": "Test case for critique summarizer using technology opinion discussion",
+  "content_type": "critique",
+  "expected_metrics": {
+    "has_title": true,
+    "has_dek": true,
+    "has_tldr": true,
+    "has_tags": true,
+    "has_body": true,
+    "title_valid": true,
+    "dek_valid": true,
+    "tldr_valid": true,
+    "tags_valid": true,
+    "body_word_count_valid": true,
+    "has_sections": true
+  },
+  "messages": [
+    {
+      "role": "user",
+      "content": "I've been thinking about the current state of social media platforms and I'm really concerned about their impact on society. What's your take on this?"
+    },
+    {
+      "role": "assistant",
+      "content": "That's a very valid concern. Social media platforms have created both incredible opportunities for connection and some serious problems. On the positive side, they've enabled global communication, democratized content creation, and provided platforms for marginalized voices. However, there are significant downsides: algorithmic manipulation, echo chambers, mental health impacts, and the spread of misinformation."
+    },
+    {
+      "role": "user",
+      "content": "I think the biggest issue is how these platforms prioritize engagement over truth. The algorithms seem designed to keep people scrolling rather than informed. What do you think about this?"
+    },
+    {
+      "role": "assistant",
+      "content": "You've identified a core problem. The engagement-driven model creates perverse incentives where platforms profit from outrage, controversy, and addictive content rather than quality information. This leads to: 1) Filter bubbles that reinforce existing beliefs, 2) Viral misinformation that spreads faster than corrections, 3) Mental health issues from constant comparison and validation-seeking, 4) Political polarization as extreme content gets more engagement."
+    },
+    {
+      "role": "user",
+      "content": "I'm particularly frustrated with how these companies respond to criticism. They always say they're working on it, but the problems seem to get worse. Do you think they're actually trying to fix these issues?"
+    },
+    {
+      "role": "assistant",
+      "content": "That's a fair criticism. While these companies do invest in content moderation and safety features, their fundamental business model remains unchanged. The core issue is that their revenue depends on maximizing user engagement and data collection, which often conflicts with user wellbeing and democratic values. Real change would require: 1) Algorithmic transparency, 2) Alternative business models, 3) Stronger regulatory oversight, 4) User control over their feeds and data."
+    },
+    {
+      "role": "user",
+      "content": "What do you think the solution is? Is it regulation, competition, or something else?"
+    },
+    {
+      "role": "assistant",
+      "content": "I think it requires a multi-pronged approach: 1) Regulation is necessary to establish baseline standards and accountability, 2) Competition from alternative platforms with different models could drive innovation, 3) User education and media literacy are crucial, 4) Technical solutions like better content moderation and algorithmic auditing, 5) Cultural shift toward valuing quality over quantity in our information consumption. No single solution will be sufficient."
+    }
+  ],
+  "title_hint": "Critical Analysis of Social Media Platform Impact"
+}

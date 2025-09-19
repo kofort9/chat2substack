@@ -1,0 +1,31 @@
+length:
+  target_words: 450
+  hard_cap_words: 900
+
+manual_paste:
+  max_chars: 10000
+
+redaction:
+  pseudonymize_private_names: true
+  private_name_list: []
+  allow_public_figures: true
+
+substack:
+  host: "https://YOURNAME.substack.com"
+  create_draft: true
+
+guardrails:
+  blocked_phrases: []
+  enforce_tone: true
+
+citations:
+  enable_further_reading: true
+
+storage:
+  keep_input_html: false
+  keep_sanitized_json: true
+
+models:
+  provider: "local"
+  primary: "template"
+  temperature: 0.2

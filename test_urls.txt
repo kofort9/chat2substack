@@ -1,0 +1,22 @@
+# Test URLs for chat2substack pipeline
+
+## Primary Test URL
+https://chatgpt.com/share/68cc337e-4cf0-8013-9b24-960236a8df4b
+
+## Additional Test URLs
+https://chatgpt.com/share/68cc3fb2-2ac4-8013-857d-0ba20e2f2d68
+
+## Research Article Test URLs
+https://chatgpt.com/share/68cc5058-2e1c-8013-9700-8b83c2cf9f23
+https://chatgpt.com/share/68cc5076-1294-8013-916c-ca2dc37fb4ed
+
+## Critique Test URLs
+https://chatgpt.com/share/68cc501f-5d14-8013-bb20-05a486291e2b
+
+## Archived Test URLs (add more as needed)
+# https://chatgpt.com/share/68cc2b1c-2674-8013-805c-5d01fb983742
+# https://chatgpt.com/share/68cc2fcd-500c-8013-9125-6b2b2bc268f4
+
+## Usage
+# To test with the primary URL:
+# python -m src.run --input-url https://chatgpt.com/share/68cc337e-4cf0-8013-9b24-960236a8df4b --content-type technical_journal

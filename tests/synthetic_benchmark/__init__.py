@@ -1,0 +1,1 @@
+"""Synthetic benchmark testing module."""

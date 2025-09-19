@@ -1,0 +1,645 @@
+{
+  "name": "Primary Test URL - Sentry Integration",
+  "description": "Real conversation from Primary Test URL for technical journal testing",
+  "content_type": "technical_journal",
+  "expected_metrics": {
+    "has_title": true,
+    "has_dek": true,
+    "has_tldr": true,
+    "has_tags": true,
+    "has_body": true,
+    "title_valid": true,
+    "dek_valid": true,
+    "tldr_valid": true,
+    "tags_valid": true,
+    "body_word_count_valid": true,
+    "has_sections": true
+  },
+  "messages": [
+    {
+      "role": "user",
+      "content": "I\u2019m considering \u201cSelf-correcting function calling\u201d and reinforcement learning for reasoning, like DeepSeek-R1, which uses RL and verification for improved automation. This type of reasoning could impact reliability. I need to confirm whether DeepSeek-R1 is open-sourced and gather citations. Other ideas like automated GUI testing or agent protocols might also have actionable outcomes.\\"
+    },
+    {
+      "role": "user",
+      "content": "page on openai.com from about a week ago, but I need to double-check its authenticity. I'll open it to verify.\\"
+    },
+    {
+      "role": "user",
+      "content": "and cite appropriately. I'll also look into other breakthroughs beyond OpenAI, like DeepSeek-R1 and Gemini. We'll need to keep searching for a variety of sources.\\"
+    },
+    {
+      "role": "user",
+      "content": "OpenAI wants ChatGPT to be a 'super assistant' for every part of your life\\"
+    },
+    {
+      "role": "assistant",
+      "content": "Jul 17, 2025 \u2014 ChatGPT can now do work for you using its own computer, handling complex tasks from start to finish. You can now ask ChatGPT to handle requests ...\\"
+    },
+    {
+      "role": "assistant",
+      "content": "Zuckerberg reveals Meta's AI superintelligence breakthrough - and why you won't be using it anytime soon\\"
+    },
+    {
+      "role": "user",
+      "content": "I'm a Deep Learning Engineer at Refact.ai, and I wanted to share how we built the #1 open-source AI Agent on SWE-bench Verified, scored 70.4%.See more\\"
+    },
+    {
+      "role": "user",
+      "content": "I'm **DeepSeek-V3**, with a knowledge cutoff in **July 2024**. I can handle a variety of tasks, including answering questions, analyzing ...\\"
+    },
+    {
+      "role": "assistant",
+      "content": "Open AI O3 vs GPT-4: Top Differences That You Should ...\\"
+    },
+    {
+      "role": "user",
+      "content": "yes. I think u many need to dumb it down a bit more for me too. \\"
+    },
+    {
+      "role": "user",
+      "content": "So instead of like relying completely on cursor or cloud code, I can implement some of the open source coding models to do some tasks and maybe just use cursor as a director of some sort.\\"
+    },
+    {
+      "role": "user",
+      "content": "Okay, I need to outline concrete steps here. We\u2019ll focus on using an orchestrator with Cursor, integrating models like DeepSeek-Coder, StarCoder2, and Llama 3.1. For testing, tasks will include drafting, refactoring, and code search, plus CI bot scaffolding. Also, for integration with Cursor, I\u2019ll use OpenAI-compatible endpoints (vLLM). I'll confirm everything stays concise and machine-friendly.\\"
+    },
+    {
+      "role": "user",
+      "content": "I should avoid making specific claims about certain models to stay safe, but I can suggest some open-source models like DeepSeek-Coder V2, StarCoder2, Llama 3.1 Instruct, and Code Qwen 2.5. These models are available as of 2025, and the architecture can be run via OpenAI-compatible API endpoints. For the rollout plan, I\u2019ll provide steps like installing vLLM and setting up a custom endpoint with Cursor.\\"
+    },
+    {
+      "role": "assistant",
+      "content": "You are a senior engineer. Think step-by-step, then output a concrete diff plan.\\\\\\"
+    },
+    {
+      "role": "user",
+      "content": "To deal with local endpoint rate limits in Cursor, I'll suggest using it minimally or exploring alternatives. I\u2019ll provide simple diagrams to explain the architecture and propose an option like \\\\\\"
+    },
+    {
+      "role": "assistant",
+      "content": "You are a senior test engineer. Read failing pytest output and propose the minimal changes \\\\\\"
+    },
+    {
+      "role": "user",
+      "content": "Oh, just thinking about this, this is interesting. Like, having a test sentry. Is this a well-known practice? Are a lot of people doing this? Potentially, I might just... make this... I think I will create the test sentry in a separate repo. And then, like, import it as a library or something for my other repo. That might be best. But, this is cool.\\"
+    },
+    {
+      "role": "assistant",
+      "content": "You are a senior test engineer. Read failing pytest output and propose the minimal changes \\\\\\"
+    },
+    {
+      "role": "user",
+      "content": "Whose idea was this? Was this my idea? Your idea? And, yeah. I can't tell.\\"
+    },
+    {
+      "role": "user",
+      "content": "Do you think they already used this in some other Like production environments like I haven't seen production code in a while, so I wouldn't know but I Feel like it's Probably a pretty straightforward useful approach to things\\"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, it's possible! To run GitHub Actions with containers on a PR, use the `pull_request` event and set up two workflows triggered by it. Use `actions/checkout` to fetch the PR head and push changes using `GITHUB_TOKEN`. For local runners, you can run containers in jobs, but GitHub-hosted runners may struggle with large models. You can work around this by baking smaller models into a custom Docker image or using cached mounts.\\"
+    },
+    {
+      "role": "user",
+      "content": "I need to address whether it's feasible to run a self-hosted GitHub runner on a MacBook Pro, considering hardware specs like disk and RAM. I'll lay out an actionable plan: setup steps for GitHub Actions, using ngrok or Tailscale for exposure, hosting LLM services locally, and configuring Docker for models. I'll also suggest some cheaper alternatives where smaller models may be hosted within GitHub if local isn't necessary.\\"
+    },
+    {
+      "role": "user",
+      "content": "Oh, wait, so the GitHub Action can still run, can still... I guess sendRequest is the right word, but to local hosts. Like, I can use GitHub Action still, but it'll just run self-hosted on my machine, and I'll still be using GitHub Actions to do it. That's good, if I understand that correctly.\\"
+    },
+    {
+      "role": "user",
+      "content": "I'll give step-by-step instructions on setting up the self-hosted runner on a Mac, with separate repos like `testsentry` and `docsentry`, and workflows for both. No browsing is needed. The process will include folder structures, YAMLs, scripts, and different repo setup options, including multi-repo and using a monorepo if preferred. More details coming soon!\\"
+    },
+    {
+      "role": "user",
+      "content": "User is asking for alternatives, and I think I can provide general recommendations without browsing. The model landscape is dynamic though, so I could consider web-based search if necessary. I\u2019ll offer a list with models like DeepSeek-Coder, Llama 3.1, Phi-3.5, and others, along with details on memory, task suitability, and local CPU use. I\u2019ll focus on being concise.\\"
+    },
+    {
+      "role": "user",
+      "content": "The user asked for a comparison of open-source models for local hosting, with suggestions like Llama 3.1 8B, Qwen 7B, and others. They want justification and alternatives for their Mac runner setup, avoiding cloud costs, and are concerned about model size and rate limitations. I'll provide a concise, practical overview based on these needs.\\"
+    },
+    {
+      "role": "user",
+      "content": "I\u2019m considering suggesting categories, like Reasoner (doc writing) versus Coder (patch diffs). I\u2019ll focus on things like instruction-following, diff quality, and speed on a Mac. I\u2019ll also weigh quantizations like GGUF q4_K_M. Some options like Qwen 2.5 7B Instruct might work, but others, like SmolLM 1.7B, seem less ideal. I'll mention models like Mixtral 8x7B, which could be tricky due to its memory demands.\\"
+    },
+    {
+      "role": "user",
+      "content": "I have a 2 RTX 5090. Is Codestral 22B still the best choice for local code related tasks (code completion, refactoring, understanding context ...\\"
+    },
+    {
+      "role": "user",
+      "content": "I have sources for models like Llama 3.1 8B Instruct, Qwen 2.5 7B Instruct, DeepSeek-Coder V2, StarCoder2-7B, and Mistral Codestral (now the 2508 version). I should also check for CodeQwen. I\u2019ll look for the Qwen2.5-Coder model page so I can get the most current details.\\"
+    },
+    {
+      "role": "user",
+      "content": "I have a Zephyrus laptop with 8GB of VRAM and wonder if those of you who use LLMs for coding would shed some light onto the level of code this can write.See more\\"
+    },
+    {
+      "role": "user",
+      "content": "I have enough to compare the models, including a mention of \\\\\\"
+    },
+    {
+      "role": "user",
+      "content": "(released July 2025) \u2014 though it might be too heavy on a Mac with 22B parameters. Models like DeepSeek-Coder-V2 16B with 2.4B active tokens might be more efficient but still memory-heavy, unless quantized. I\u2019ll provide memory and disk estimates without overcomplicating things. I'll also outline why these choices work for the Mac runner and give a rough idea of sizes, focusing on performance and licensing (Apache-2.0).\\"
+    },
+    {
+      "role": "user",
+      "content": "I\u2019m thinking about starting with something like: \u201cYou\u2019re optimizing for local-only, zero $ spend, Mac with 16\u201332GB, two roles (planner/doc; patch generator), which leads to 7\u20138B quantized models.\u201d I can then explain why Llama 3.1 8B Instruct is a good fit: it\u2019s stable, multi-lingual, and free for commercial use. I'll keep it direct and concise!\\"
+    },
+    {
+      "role": "user",
+      "content": "For Qwen 2.5 7B Instruct, it\u2019s a strong model with improved task performance and long context, sourced from Meta\u2019s blog and Huggingface. DeepSeek-Coder-V2 (6.7B/16B) is top for code-related tasks and diffs, with strong performance. StarCoder2 and Mistral 22B provide excellent alternatives, but could be too heavy for Mac. A 7-8B is ideal for laptops, unless you have a powerful machine. I'll likely summarize this in a selection matrix for clarity.\\"
+    },
+    {
+      "role": "user",
+      "content": "I've been using DeepSeek Coder v2 Lite (Q8) for the past month or two and it works really well. Full model fits in VRAM and runs at ~90 tokens/s on my nvidia ...\\"
+    },
+    {
+      "role": "assistant",
+      "content": "Nov 6, 2024 \u2014 They just updated the weights of Qwen2.5-Coder-7B-Instruct ... You'll need to ollama pull qwen2.5-coder to get the latest version ...\\"
+    },
+    {
+      "role": "assistant",
+      "content": "DeepSeek offers two parameter sizes: 16B (Lite) and 236B (Full). If you want to run DeepSeek-Coder-V2 in BF16 format for inference, you'd ...\\"
+    },
+    {
+      "role": "assistant",
+      "content": "Jun 11, 2024 \u2014 Codestral is a 22B open-weight model licensed under the new Mistral AI Non-Production License, which means that you can use it for research ...\\"
+    },
+    {
+      "role": "assistant",
+      "content": "This is a abliterated model, further finetuned on custom dataset for more uncensoredness, recomendet system prompr is You are JOSIE, which is an acronym for ...\\"
+    },
+    {
+      "role": "user",
+      "content": "Today I'll explain the syntax used by the Ollama model names. So if you want to understand what \u201cllama3.1:405b-instruct-q8_0\u201d means, ...\\"
+    },
+    {
+      "role": "user",
+      "content": "I have tried to set up 3 different versions of it, TheBloke GPTQ/AWQ versions and the original deepseek-coder-6.7b-instruct. I have tried the 33B as well.\\"
+    },
+    {
+      "role": "user",
+      "content": "ok currently pulling \\\nollama pull deepseek-coder:6.7b-instruct\\\nand \\\nollama pull llama3.1:8b-instruct-q8_0\\\n\\\nnow at the same time damn 3.8+8.5 GB is a lot.\\\n\\\nI\u2019ll do sanity check after. I haven\u2019t set up LiteLLM config at all.\\\n\\\n\\"
+    },
+    {
+      "role": "user",
+      "content": "I'll suggest the user reduce model size by using q4_K_M (around 3-4GB) to fit the memory and disk constraints on their Mac. I\u2019ll recommend initially using just one model in q4, and offer commands to list available variants, remove large models, and set up LiteLLM with a minimal configuration. I'll also caution that q8_0 may be too large for their setup.\\"
+    },
+    {
+      "role": "user",
+      "content": "}\\\n```\\\n\\\nIf you ever want a tiny quality bump without blowing disk:\\\n- Make **patcher** `q5_K_M` and keep **planner** `q4_K_M`. That\u2019s a good \u201cquality where it counts\u201d compromise.\\\n\\\nYou were right to push here. I should\u2019ve led with the lightweight setup for an airport build.\\"
+    },
+    {
+      "role": "user",
+      "content": "well I mean we can still optimize for quality within restraints I have M1 chip 16GB memory so what can we do with that?\\"
+    },
+    {
+      "role": "user",
+      "content": "To optimize within the 16GB M1 memory, I could suggest limits on model concurrency, such as one or two models running at a time, and fine-tuning batch sizes for speed. I should use the appropriate quantization settings like q5_K_M for patching and q4_K_M for planning, adjusting temperature and context lengths to balance quality versus performance. I also need to mention memory pressure management and possible use of Metal or MPS acceleration.\\"
+    },
+    {
+      "role": "user",
+      "content": "For model performance, I could suggest reducing the context length (num_ctx) to 4096 for faster processing with less RAM usage, while setting it to 8192 for document updates. For better speed, I'll recommend setting CPU threads to 6-8 on M1, but avoid unnecessary claims about grammar support or beam search.\\"
+    },
+    {
+      "role": "user",
+      "content": "Ok those are good recommendations ill have to revisit them later though. I think we should create a doc that i can store in notion so I remember the things we talked about and i can keep adding to it. So maybe a design doc for this Sentry project. also where do I store ~ /litellm.yaml?\\"
+    },
+    {
+      "role": "user",
+      "content": "To create a design doc for the Sentry project, I'll structure sections like goals, scope, architecture, model choices, setup, and workflow information. I'll provide clear guidance on the storage of /litellm.yaml, offering options like the home directory or secure environment variables. The doc will be formatted in Markdown, concise yet complete for easy copy-pasting into Notion. A downloadable file might be useful too, and I'll include essential commands and minimal checklists for clarity.\\"
+    },
+    {
+      "role": "user",
+      "content": "I'm going to create a markdown file with the design doc for Sentry in mind. It'll include placeholders, checklists, and guidance about where to store /litellm.yaml. This could be stored in places like the home directory, the project repo, or the CI for the self-hosted runner. I'll also provide steps for set-up, including creating a launchd plist for Mac autostarting. A link to download the file will be included!\\"
+    },
+    {
+      "role": "user",
+      "content": "I\u2019ll focus on keeping the document detailed yet moderate in length. The user wants a structured design doc, so I'll include all key sections like Summary, Objectives, System Overview (with an ASCII diagram), Components, and various others that cover practical aspects like GitHub workflows and failure mitigations. I\u2019ll also answer where to store `/litellm.yaml` within the doc.\\"
+    },
+    {
+      "role": "assistant",
+      "content": "For a self-hosted runner on Mac, store `/litellm.yaml` in `/Users/\\u003cyour_user\\u003e/litellm.yaml`. You can set the path with `--config`, or use the `LITELLM_CONFIG` environment variable, or even create an alias. If multi-user or versioning needed, store it under `/.config/litellm/litellm.yaml`. Keep keys secure; don't commit them\u2014no keys are needed for Ollama.\\"
+    },
+    {
+      "role": "assistant",
+      "content": "Let's install pipx on macOS. You can use Homebrew with: `brew install pipx \\u0026\\u0026 pipx ensurepath`, or install via pip with: `python3 -m pip install --user pipx`, then `python3 -m pipx ensurepath`. For litellm, either install it via pip in a virtual environment, or use an alternative like Docker. If using a venv, running `python3 -m pip install litellm` works well!\\"
+    },
+    {
+      "role": "user",
+      "content": "I'm unsure if litellm has a specific module-run entry point; typically, you'd use the `litellm` command. However, if it's packaged differently, you can likely call the console script created in the virtual environment directly. I'll check and adjust based on how it's set up for your system.\\"
+    },
+    {
+      "role": "assistant",
+      "content": "New versions support referencing GGUF files from Hugging Face. You can use `ollama run llama3.1` to fetch models, but keep in mind that it also uses R2. If you're looking for a specific version, check for the correct GGUF file and verify its URL. For DNS issues, try switching to 1.1.1.1 or 8.8.8.8 and flushing DNS.\\"
+    },
+    {
+      "role": "assistant",
+      "content": "To troubleshoot with a hotspot, verify your connection with commands like `nslookup` to test the domain or use `curl`. You can resume partial downloads, though I\u2019d recommend restarting for safety. Be aware that using a hotspot may use 3-5 GB per model. If unsure, manually downloading the model via Modelfile is an option.\\"
+    },
+    {
+      "role": "user",
+      "content": ", which suggests an issue with DNS rather than the tag. I'll suggest the correct tag \\\\\\"
+    },
+    {
+      "role": "assistant",
+      "content": "To fix the missing extras, run pipx to either uninstall and reinstall with extras or inject them:\\\n\\\n- Command 1: `pipx uninstall litellm`\\\n- Command 2: `pipx install 'litellm[proxy]'` or `pipx inject litellm 'litellm[proxy]'`\\\n\\\nSince you've got pipx, using `pipx install --force 'litellm[proxy]'` should work for reinstalling with the proxy dependencies. Alternatively, `pipx runpip litellm install 'litellm[proxy]'` could install just those missing extras.\\"
+    },
+    {
+      "role": "assistant",
+      "content": "`.\\\n\\\nYou can also run: `pipx runpip litellm install 'litellm[proxy]'` as a quicker fix without uninstalling.\\"
+    },
+    {
+      "role": "user",
+      "content": "We need to explain the `litellm.yaml` file setup. First, show the typical paths and how to find the file. I'll include commands to create directories, edit the file using tools like `cat` or `vi`, and confirm the config is loaded. I\u2019ll provide examples, YAML indenting tips, and a fallback model config suggestion for Ollama API. I'll avoid tools and keep it direct.\\"
+    },
+    {
+      "role": "assistant",
+      "content": "To find the `litellm.yaml` file, it's typically stored at `/.config/litellm/litellm.yaml`. If the file doesn't exist, you can create it. The path is used when passing the `--config` flag. Alternatively, use `echo /.config/litellm/litellm.yaml` or `ls` to check. You can also use `which litellm` to locate the installation path (e.g., pipx), though the config is separate from that.\\"
+    },
+    {
+      "role": "user",
+      "content": "To check if the YAML file is being used, you can start the server and look at the logs to confirm the configuration is loaded. You can also pass the `--debug` flag, change the port, and check `/v1/models` to confirm using `curl` and look for model IDs like `local/planner` or `local/patcher`. Following this, I'll include steps for creating the directory and populating it with YAML content.\\"
+    },
+    {
+      "role": "assistant",
+      "content": "`.\\\n\\\n---\\\n\\\n## Start the server (pointing at your config)\\\n\\\n```bash\\\nlitellm --host 127.0.0.1 --port 8080 --config ~/.config/litellm/litellm.yaml\\\n```\\\n\\\n(Optional) verify the file is picked up by adding `--debug`.\\\n\\\n---\\\n\\\n## Sanity checks\\\n\\\nList models (you should see your aliases):\\\n```bash\\\ncurl -s http://127.0.0.1:8080/v1/models | jq .data[].id\\\n# expect: \\\\\\"
+    },
+    {
+      "role": "user",
+      "content": ":0.2}'\\\n```\\\n\\\n---\\\n\\\n## Point your Sentries at it\\\n\\\nEnv vars your scripts/workflows should use:\\\n```bash\\\nLLM_BASE=http://127.0.0.1:8080/v1\\\nMODEL_PLAN=local/planner\\\nMODEL_PATCH=local/patcher\\\n```\\\n\\\nThat\u2019s it. If you want, I can drop a one-line smoke test into each Sentry repo so they fail fast with a clear error if `LLM_BASE` or the model names are wrong.\\"
+    },
+    {
+      "role": "assistant",
+      "content": "To fix the error, specify the provider as it's missing. Here's the updated config, along with test commands.\\\n\\\nIf Ollama is running on a non-default interface or port, you're using 11434, which is correct.\\\n\\\nDon\u2019t forget, if you're running LiteLLM on 127.0.0.1 with a self-hosted runner, keep that in mind. You can also add `--debug` to check deployment creation.\\\n\\\nTry testing with `curl /v1/health`.\\"
+    },
+    {
+      "role": "assistant",
+      "content": "|| true\\\nlitellm --host 127.0.0.1 --port 8080 --config ~/.config/litellm/litellm.yaml --debug\\\n```\\\nYou should now see it create deployments without the \u201cLLM Provider NOT provided\u201d error.\\\n\\\nList models:\\\n```bash\\\ncurl -s http://127.0.0.1:8080/v1/models | jq .data[].id\\\n# expect: \\\\\\"
+    },
+    {
+      "role": "user",
+      "content": "It looks like the user has successfully set up LiteLLM with models. Now I\u2019ll suggest they run test chat calls, maybe with a tiny smoke test Python script and curl for efficiency. I\u2019ll also mention how to set environment variables, verify Ollama tags, and adjust concurrency actions. I'll provide a quick example for setting context tokens using \\\\\\"
+    },
+    {
+      "role": "assistant",
+      "content": "You're good to go. Run a quick smoke test, then plug it into TestSentry/DocSentry. No need to reinvent the wheel \u2014 you've been provided with the minimal sentinel script and GitHub Actions example already. As for storing litellm.yaml, we\u2019ve already addressed that. Here\u2019s a simple checklist: run two chat tests, create environment variables, test from terminal and Sentry CLI, then confirm.\\"
+    },
+    {
+      "role": "user",
+      "content": "If you want to set up autostart with `systemd` or `launchd`, I can mention the simple `launchctl` command. But let\u2019s keep it brief. I'll also provide the small Python script for testing both models and a success check. If you hit 500 errors, try checking the Ollama container and adjust accordingly.\\"
+    },
+    {
+      "role": "user",
+      "content": "I need to check whether the required model tags exist by running a specific command. If the tags are missing, I can try pulling the models again or creating them if necessary. It looks like the quantized tags might include Q4_K_M, but I'm not sure about Q5_K_M for DeepSeek. I\u2019ll also test direct inference and check the LiteLLM configuration for accuracy.\\"
+    },
+    {
+      "role": "assistant",
+      "content": "\\\n```\\\n\\\nIf they\u2019re **not** listed, pull them (use the quant we settled on):\\\n\\\n```bash\\\nollama pull llama3.1:8b-instruct-q4_K_M\\\nollama pull deepseek-coder:6.7b-instruct-q5_K_M\\\n```\\\n\\\n(If DNS acts up again, switch to hotspot, then retry one model at a time.)\\\n\\\n---\\\n\\\n## 2) Verify you can chat **directly** with Ollama\\\n\\\n```bash\\\n# planner\\\ncurl -s http://127.0.0.1:11434/api/chat -d '{\\\n  \\\\\\"
+    },
+    {
+      "role": "assistant",
+      "content": "\\\nrouter_settings:\\\n  routing_strategy: usage-based\\\n```\\\n\\\nThen restart LiteLLM **with debug** so you can see deployment creation:\\\n\\\n```bash\\\npkill -f \\\\\\"
+    },
+    {
+      "role": "assistant",
+      "content": ":512}}`\\\n\\\nYou can always switch back to LiteLLM later; your Actions will still run on your self-hosted runner.\\\n\\\n---\\\n\\\nPing me with the output of:\\\n- `curl -s 127.0.0.1:11434/api/tags | jq '.models[].name'`\\\n- your current `litellm.yaml` (just the `model_list` part)\\\n- the first 20 lines after starting LiteLLM with `--debug`\\\n\\\n\u2026and I\u2019ll zero in on the exact mismatch in one pass.\\"
+    },
+    {
+      "role": "user",
+      "content": "We need to confirm success with LiteLLM, retrying tests and integrating with environment variables and workflows. The user has provided useful outputs, including model versions and direct tests via Ollama. I'll suggest testing via LiteLLM again, providing a minimal script and checklist to guide them.\\"
+    },
+    {
+      "role": "assistant",
+      "content": "so health checks finish\\\n```\\\n\\\nYou should see logs like:  \\\n`created deployment for model local/planner (provider=ollama \u2026)`\\\n\\\n## 3) Re-run the two sanity calls through LiteLLM\\\n```bash\\\n# list\\\ncurl -s http://127.0.0.1:8080/v1/models | jq .data[].id\\\n\\\n# planner\\\ncurl -s http://127.0.0.1:8080/v1/chat/completions \\\\\\\\\\\n -H 'content-type: application/json' \\\\\\\\\\\n -d '{\\\\\\"
+    },
+    {
+      "role": "assistant",
+      "content": ": 512}\\\n}\\\n```\\\n\\\nYou can switch back to LiteLLM later; your GitHub Actions + env vars stay the same shape.\\\n\\\nPing me if you still see the 429 after the exact config above + warmup; paste the first ~20 lines of the LiteLLM `--debug` startup and I\u2019ll pinpoint it.\\"
+    },
+    {
+      "role": "user",
+      "content": "This might be due to a failed health check or a timeout, even though direct calls to Ollama succeeded. I'll suggest setting up debug logging with `\\\\\\"
+    },
+    {
+      "role": "assistant",
+      "content": ": 0.2}\\\n}\\\n```\\\nYou can flip back to LiteLLM later without changing your code\u2014just switch the env vars.\\\n\\\n---\\\n\\\nIf you want, I\u2019ll give you a tiny `sentry_smoke.sh` that:\\\n1) checks Ollama tags,\\\n2) calls both models directly,\\\n3) calls both through LiteLLM (aliases and provider names),\\\nand prints \u2705/\u274c with the exact failing step. That\u2019ll make \u201care deployments healthy?\u201d a one-command check.\\"
+    },
+    {
+      "role": "assistant",
+      "content": "}]}' \\\\\\\\\\\n | jq -r .choices[0].message.content\\\n```\\\n\\\n### 4) If you\u2019re done fighting: skip LiteLLM today\\\nYour Sentries can talk **directly** to Ollama and you can switch back later without code changes:\\\n\\\n```\\\nLLM_BASE=http://127.0.0.1:11434\\\nMODEL_PLAN=llama3.1:8b-instruct-q4_K_M\\\nMODEL_PATCH=deepseek-coder:6.7b-instruct-q5_K_M\\\n```\\\n\\\nPOST to `/api/chat`:\\\n```json\\\n{\\\\\\"
+    },
+    {
+      "role": "user",
+      "content": "with basic prompts and check options like set num_threads and GPU acceleration settings. I'll also confirm that Apple Silicon automatically uses Metal for GPU.\\"
+    },
+    {
+      "role": "user",
+      "content": "is important for performance. I'll suggest using q4_K_M or q5_K_M models and guide them on updating Ollama, checking the version with \\\\\\"
+    },
+    {
+      "role": "user",
+      "content": "(likely 0.11.4). Also, specifying stop tokens can help with EOS issues. If DeepSeek-Coder acts up, I\u2019ll suggest switching models or using a patcher. I'll include a speed test to analyze the models' performance.\\"
+    },
+    {
+      "role": "user",
+      "content": "I\u2019ll suggest adjusting \u201cnum_ctx\u201d to 2048 to reduce memory usage and setting \u201cnum_thread\u201d to the number of physical cores for M1. Although I believe \u201cnum_thread\u201d is a valid option in Ollama, I\u2019ll be cautious and note that it depends on whether it's supported. Since their models are working with q4/q5, I\u2019ll reassure them that they don\u2019t need additional fixes right now.\\"
+    },
+    {
+      "role": "assistant",
+      "content": "\\\n```\\\n(Keep Llama 3.1 for planning/docs; use Qwen coder for diffs.)\\\n\\\n---\\\n\\\nYou\u2019ve already done the annoying parts (network, autostart, provider hints). Run the sanity harness above\u2014if you see two \u201cOK\u201ds in both A and B, your deployments are good and you can wire the Sentries. If DeepSeek gives you any attitude, we swap it for Qwen coder and move on.\\"
+    },
+    {
+      "role": "user",
+      "content": "being set to zero. The logs don\u2019t show deployment creation, so I think we might need to review or adjust the router settings.\\"
+    },
+    {
+      "role": "user",
+      "content": "To proceed, we should bypass LiteLLM and use Ollama directly. I'll suggest a clear checklist for troubleshooting and rewriting Sentry scripts to utilize Ollama's API. This includes curl tests to verify the connection. Ollama offers an OpenAI-compatible endpoint, and given our setup challenges, using the /api/chat endpoint should resolve things.\\"
+    },
+    {
+      "role": "assistant",
+      "content": "Yeah\u2014skip LiteLLM for now. It\u2019s optional plumbing. You can run everything **directly on Ollama** today and ship.\\\n\\\nHere\u2019s the smallest change set to get you unblocked.\\\n\\\n# 1) Kill LiteLLM, start only Ollama\\\n```bash\\\npkill -f \\\\\\"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, it is time to create the Sentry Github repo. You should create two repos, \\\\\\"
+    },
+    {
+      "role": "assistant",
+      "content": "For setting up GitHub Actions, you can either pip install from git+https to your repos or use git submodules for simplicity. Include a workflow YAML that runs both repos, uses env vars, and tests. Ensure Ollama is running, env vars are set, and check the chat functionality. For GitHub, you can use git init and push code skeletons with basic setup for license, editorconfig, and pyproject. Keep it succinct and clear!\\"
+    },
+    {
+      "role": "user",
+      "content": "I think i'm going to just store all sentries in one repo make things simpler\\"
+    },
+    {
+      "role": "user",
+      "content": "I need to outline the steps for organizing both sentries in one repo, with a Python package setup and entries. I'll include shared utilities, setup for GitHub actions, environment configs, and a makefile. CLI code will detect Ollama or LiteLLM, plus tests and pre-commits. I'll ensure clarity for step-by-step execution.\\"
+    },
+    {
+      "role": "user",
+      "content": "I\u2019ll create a tar.gz file for the sentries repo with essential files\u2014like pyproject.toml, chat.py, and a makefile. I'll add README, workflows, smoke script, and sample .env with minimal logic. Instead of full integration, I'll offer a skeleton that prints \\\\\\"
+    },
+    {
+      "role": "user",
+      "content": "and includes a task list for improvements. Then, I'll provide a download link.\\"
+    },
+    {
+      "role": "user",
+      "content": "I\u2019ll create a repo with a structured setup, including two CLI commands (`testsentry` and `docsentry`) and a minimal skeleton for the chat function with env-based model detection. I'll include a Makefile for installation and testing, a README with a quick start, workflows for the target repo, and an MIT license. I'll keep dependencies lightweight\u2014requests and pyyaml\u2014and include placeholder allowlist functions. Then, I'll create the directory and files for this.\\"
+    },
+    {
+      "role": "assistant",
+      "content": "To set up workflows for installing from a private GitHub repo, we can use `pip install git+https` with a token or the `GITHUB_TOKEN` for GitHub Actions. Alternatively, using `actions/checkout`, you can pull the sentries repo and run `pip install -e` to avoid private auth issues. Steps for creating workflows should be clear and involve adding two YAML files.\\"
+    },
+    {
+      "role": "user",
+      "content": "I need to create a prompt for Cursor, guiding it to implement the user\u2019s Sentry projects\u2014TestSentry and DocSentry. It needs to handle local integration, environment variables, GitHub Actions, strict allowlists, and doc storage. The user prefers directness with a touch of clever, concise humor. Time to get started!\\"
+    },
+    {
+      "role": "user",
+      "content": "I should break down the tasks for a Python CLI setup: structure, chat function, interactions with git for branches/patches and diffs, opening PRs with GitHub API, enforcing allowlists, and handling ABORT. I'll also go over environment config for Ollama, smoke tests, and concurrency guards. The \\\\\\"
+    },
+    {
+      "role": "user",
+      "content": "will have sections like Goals, Repo Structure, Implementation Plan, APIs, and a Quick Start message. Let's make sure I don't need to browse the web for this!\\"
+    },
+    {
+      "role": "user",
+      "content": "I need to generate a detailed system prompt for Cursor, avoiding questions and clarifying complex parts. I'll include placeholders like \\u003cORG\\u003e/\\u003cREPO\\u003e, and focus on breaking tasks into steps with checklists. I'll ensure it's robust, guiding Cursor to modify files and using environment variables, while considering Ollama endpoint issues.\\"
+    },
+    {
+      "role": "user",
+      "content": "I need to provide a detailed prompt for Cursor that includes creating or modifying files, broken down into steps with checklists. I'll include guardrails and instructions for using environment variables while making clear how to use the direct Ollama endpoint. I'll also add optional LiteLLM toggling, define Python modules, and offer sample system prompts for the planner and patcher models. All tasks will be aligned with the user's setup.\\"
+    },
+    {
+      "role": "user",
+      "content": "I should include instructions for using environment variables and the direct Ollama endpoint. I'll ensure the setup works with Ollama directly, with later support for LiteLLM toggling. I'll define the necessary Python modules and provide sample system prompts for planner and patcher models. Visuals are optional but kept minimal. The prompt will be presented in a \\\\\\"
+    },
+    {
+      "role": "user",
+      "content": "in the ASCII part, so I\u2019ll focus on the tagline itself and remove the emoji. I'll use the tools to adjust it.\\"
+    },
+    {
+      "role": "user",
+      "content": "I need to update the file by changing the tagline from \u201c\ud83e\udd16 AI-Powered Code Guardian\u201d (or possibly \\\\\\"
+    },
+    {
+      "role": "user",
+      "content": ") to the new one. I'll also check that \u201cargparse\u201d is imported at the top. There\u2019s also a possible issue where the code might raise a NameError if \\\\\\"
+    },
+    {
+      "role": "user",
+      "content": "isn't defined in certain cases. I'll be careful with the file editing to avoid that.\\"
+    },
+    {
+      "role": "user",
+      "content": "Done. I swapped the tagline to:\\\n\\\nSentries: Tests \\u0026 Docs Automation\\\n\\\nNo emoji, clean spelling, centered in the banner. Want me to tighten the spacing or change the top ASCII block to a simpler one-liner? Also: I spotted a small bug in `configure_environment()` \u2014 if `.env` already exists, `env_content` is undefined before you write `.env.example`. If you want, I can patch that next so the setup script doesn\u2019t crash on rerun.\\"
+    },
+    {
+      "role": "user",
+      "content": "I\u2019ve noticed the file uses a static 62-character box for the ASCII art. To fit the smaller terminal, I can reduce the width of the tagline or adjust the text inside. Options like \u201cSentries: Tests \\u0026 Docs\u201d or \u201cSentry: Tests + Docs\u201d could work, maintaining good formatting within the box.\\"
+    },
+    {
+      "role": "user",
+      "content": "Since the user wants the banner to fit a small terminal, the existing big ASCII block may be too wide. To solve that, I can propose a compact banner for narrower windows by detecting the terminal width. If it\u2019s under 80 characters, I\u2019ll switch to a simpler, single-line banner with a small border.\\"
+    },
+    {
+      "role": "user",
+      "content": "I need to craft a prompt for Cursor that\u2019ll allow it to update the README whenever there are changes. The update should be based on diffs between the repo and README, ensuring it's concise and adheres to style. The prompt must ask Cursor to propose PRs for changes but not do direct edits unless required.\\"
+    },
+    {
+      "role": "user",
+      "content": "Okay, I need to include key details for the README update prompt. It should cover expected changes like banner wording, LLM specifics, repo structure, model tags, and more. The prompt will ask for a unified diff targeting the README, ensuring everything from prerequisites to workflows is aligned. I'll include placeholders for easy customization. It'll be direct and clear for Cursor to process updates and generate a PR description.\\"
+    },
+    {
+      "role": "user",
+      "content": "I need to adjust the prompt to guide Cursor in autodetecting recent changes by scanning the repo. It should check CLI entry points, environment variables, scripts, and workflows, and compute a changelog. The prompt should include a checklist and style guidelines. I'll also ensure it follows specific criteria, like fixing the README\u2019s top heading to \\\\\\"
+    },
+    {
+      "role": "user",
+      "content": "I need to write the prompt for Cursor to update the README based on recent code changes. It should check for new or removed commands and reconcile the README with implemented scripts to avoid inconsistencies. The prompt must be concise, specific, and include checklists and deliverables like a unified diff and the correct heading updates. I'll make sure it's clear and direct.\\"
+    },
+    {
+      "role": "user",
+      "content": "when referring to multiple components, like the CLIs. I'll adjust the heading, replace references to \\\\\\"
+    },
+    {
+      "role": "user",
+      "content": "Plus, I'll ensure grammar is correct, changing \u201cSentries automatically tags\u2026\u201d to \u201cSentries automatically tag\u2026\u201d in the README.\\"
+    },
+    {
+      "role": "user",
+      "content": "for the bots. I'll fix plurals and grammar issues like changing \\\\\\"
+    },
+    {
+      "role": "user",
+      "content": "where appropriate, especially in commands and lower-case usage. I'll avoid overhauling details not requested, focusing on precise find-and-replace edits.\\"
+    },
+    {
+      "role": "user",
+      "content": "still need to do some more testing but the repo is built. i\u2019m wondering if I want to add the ability for the testsentry to discover new test that need to be written. im reviewing the code and wondering how it pulls in the correct context it would have to be the combination of the test files the pytest run and potential the code that is being tested? \\"
+    },
+    {
+      "role": "user",
+      "content": "Okay, for implementing test discovery, I'll suggest a concrete design using strategies like git diffs, pytest's `--collect-only`, coverage.py, and analyzing failing stack traces. For context building, I'll focus on function signatures, docstrings, and relevant diffs while keeping it manageable. I'll also touch on thresholds, flags like \\\\\\"
+    },
+    {
+      "role": "user",
+      "content": "I don\u2019t know how many instances of the model I can run at a time though so maybe we start with 1. I need to test what I have works anyway first. \\"
+    },
+    {
+      "role": "user",
+      "content": "I'm thinking of suggesting lightweight options for memory without needing too much computation, like using SQLite with embeddings or leveraging external APIs. For cost control, I'd recommend free tiers and offloading memory to text files accessed via ripgrep. Another idea could be using GitHub Issues for storing memory references and applying simple search techniques like BM25 or TF-IDF.\\"
+    },
+    {
+      "role": "user",
+      "content": "I want to add this project to my resume\\\n how would lets keep it to 3 bullets\\"
+    },
+    {
+      "role": "user",
+      "content": "I've crafted three concise bullet points summarizing the Sentry project for your resume. The first bullet covers the project's purpose \u2014 local LLM test and documentation automation. The second bullet explains the design, including two-model architecture, patching, diff validation, and customization features. The third bullet outlines implementation details like concurrency gates, GitHub integration, and principles of scalability and memory efficiency.\\"
+    },
+    {
+      "role": "user",
+      "content": "I'll search for available GitHub API endpoints via the browser tool to find the one for reading the contents of the 'feature/test-codesentry-workflow' branch in the 'kofort9/sentry' repository. Once the relevant API is located, I'll review the documentation and proceed with fetching the branch's files.\\"
+    },
+    {
+      "role": "user",
+      "content": "I'll open the API tool at http://localhost:8674 to interact with GitHub APIs. This will allow me to examine the 'feature/test-codesentry-workflow' branch in the 'sentry' repository, as requested, and fetch files to audit the code. I'll then provide suggestions and recommendations based on the content.\\"
+    },
+    {
+      "role": "user",
+      "content": "I'll search for available APIs by opening the local API tool. This will help me access the necessary tools to examine the code changes in the 'feature/test-codesentry-workflow' branch of the internal GitHub repository to provide suggestions and recommendations.\\"
+    },
+    {
+      "role": "user",
+      "content": "I'll begin by searching for available APIs for GitHub using the current API tool. I'll then get the necessary documentation and proceed to call GitHub's API to read the branch 'feature/test-codesentry-workflow' in the sentry repository. Once I have the data, I'll provide suggestions based on the branch's contents.\\"
+    },
+    {
+      "role": "user",
+      "content": "I need to propose a mini-project with clear focus: Cursor only writes the execution code, and Sentry handles tests and docs. The PR from Cursor should only include code, with TODO comments for tests. I\u2019ll give three options: LRU Cache, Cron expression parser, and URL slugifier. Plus, I\u2019ll include a concise prompt for each.\\"
+    },
+    {
+      "role": "user",
+      "content": "I need to give concrete advice on timeouts, specifically for Ollama. I'll guide on detecting timeouts, distinguishing network vs. model stalls. I'll suggest retries, splitting contexts, and implementing backoffs, using shorter prompts, and enforcing token budgets. I'll also provide examples for Python requests with timeouts and tweaking Ollama server settings. I'll focus on client-side strategies.\\"
+    },
+    {
+      "role": "assistant",
+      "content": "To manage timeouts, you can set the timeout in your code and GitHub Actions. Consider using techniques like chunking, streaming, retries with backoff, and graceful degradation. You might also configure server options for efficiency, adjust timeouts and retries, and apply Python requests with timeouts for cancellation patterns.\\"
+    },
+    {
+      "role": "user",
+      "content": "No need for all that, actually. I think we just want to focus on Black, Flake8, and ISort. And then also MyPY. And that's it.\\"
+    },
+    {
+      "role": "user",
+      "content": "I need to figure out why the line numbers are off and the diff format is invalid. The fix could involve using the correct unified diff format, specifying proper hunk headers, and ensuring zero-context or context lines. I could also suggest using a tool for search-and-replace or a content-based diff approach. The problem likely occurs because the line numbers weren\u2019t set correctly after edits shifted the file.\\"
+    },
+    {
+      "role": "user",
+      "content": "to apply partial hunks and add stop tokens to avoid prose. Additionally, I'll suggest using Python's difflib for content-based patches and AST parsing to localize line numbers. For better debugging, using specific pytest commands could help pinpoint errors.\\"
+    },
+    {
+      "role": "assistant",
+      "content": "\\\n    Return (start_idx, end_idx) of the first match of `needle` in `text`, using literal match.\\\n    You can enhance with context heuristics later if needed.\\\n    \\\\\\"
+    },
+    {
+      "role": "assistant",
+      "content": "]`\\\n- Prompt says: \u201cNo prose. No markdown fences. JSON only.\u201d\\\n\\\n### 6) Optional: anchor by AST instead of raw text (safer)\\\n\\\nIf your target is inside a specific test function, you can locate by AST and build the op automatically:\\\n\\\n- Parse file with `ast`, find `FunctionDef(name=\\\\\\"
+    },
+    {
+      "role": "user",
+      "content": "No, wow, that's an interesting approach. Okay, yeah, I guess that makes sense, then using actual line numbers. Okay, can we just compile this into a prompt that I can throw into Cursor so that it understands what it needs to do to fix this mismatch or issue?\\"
+    },
+    {
+      "role": "user",
+      "content": "For the Cursor prompt, the goal is to modify the code, focusing on JSON operations rather than diff with line numbers. I\u2019ll give concise, step-by-step instructions detailing changes, like adjusting prompts, adding validation and utils, using stop tokens, and providing code snippets in a clear format. I'll also include checklist and file paths for reference.\\"
+    },
+    {
+      "role": "assistant",
+      "content": "; do not invent line numbers or hunk headers.\\\n- Max 5 ops; total changed lines \u2264 200.\\\n- Touch ONLY allowed paths.\\\n- If you cannot guarantee exact \\\\\\"
+    },
+    {
+      "role": "user",
+      "content": "Okay, so I like how you explained everything here, but I think it would be best if it was in prompt form, details included, so that cursor can just understand what it needs to write up.\\"
+    },
+    {
+      "role": "assistant",
+      "content": "(copy/paste from excerpt). Do NOT use line numbers or diff hunks.\\\n- Max 5 ops; total changed lines \u2264 200.\\\n- Touch ONLY allowed paths.\\\n- If you cannot guarantee exact matches, output exactly: ABORT\\\n```\\\n\\\n**Also**: wherever we call the patcher LLM, add **stop tokens and tighter caps**:\\\n- `num_predict` \u2264 600  \\\n- `stop = [\\\\\\"
+    },
+    {
+      "role": "assistant",
+      "content": "))`  \\\n3) Validate (you can keep your existing allowlist/size checks)  \\\n4) `git apply -p0 --index` \u2192 run targeted `pytest`  \\\n5) If green \u2192 commit; else `git reset --hard` and skip\\\n\\\n---\\\n\\\n## 5) Unit tests (sanity)\\\n\\\n**Create** `sentries/test_diff_ops.py`:\\\n\\\n```python\\\nfrom pathlib import Path\\\nfrom sentries.diff_ops import build_patch_from_json_ops, PatchOpError\\\n\\\ndef test_build_patch_from_json_ops_simple(tmp_path: Path):\\\n    repo = tmp_path\\\n    f = repo / \\\\\\"
+    },
+    {
+      "role": "user",
+      "content": "Okay, I don't know if we need a super prompt, but we just need it to be all words because we have to fit it in the actual context input of Cursor. So yeah, like no code, just words. I know you wrote out the code, you said like verbatim, but yeah, we just want words to explain it. I think that would be the best approach. For the mismatch issue.\\\n\\"
+    },
+    {
+      "role": "user",
+      "content": "I need to distinguish between the conceptual aspects of prompts vs. mechanical guardrails. I\u2019ll provide principles, hierarchy, examples, and a matrix. But considering the context (no heavy code), I can offer a concise master prompt skeleton and focus on modular prompts. I\u2019ll also highlight default policies and checks, keeping tables simple with keywords.\\"
+    },
+    {
+      "role": "assistant",
+      "content": "Got it \u2014 let\u2019s phrase it like a **to-add checklist** you can drop into Cursor as a meta-prompt. That way it\u2019s clear, directive, and not essay-style. Here\u2019s the re-framed section:\\\n\\\n---\\\n\\\n### \u2705 Things to Add to the Prompt\\\n- State **scope** explicitly: \u201cOnly modify files under `tests/**` (and `sentries/test_*`); if not possible, reply `ABORT`.\u201d  \\\n- Define **output contract**: JSON only \u2192 `{\\\\\\"
+    },
+    {
+      "role": "user",
+      "content": "can you also summarize why we need these changes in a short paragraph that I can use for context.\\"
+    },
+    {
+      "role": "assistant",
+      "content": "You are a test failure analyzer.\\\nYour job is to analyze failing tests and plan minimal fixes.\\\n\\\n## SCOPE RESTRICTIONS\\\nONLY modify files under tests/.\\\nNEVER edit any other files.\\\nNEVER relax security checks just to pass tests.\\\n\\\n## OUTPUT CONTRACT\\\nReturn ONLY a JSON object with this structure:\\\n{\\\n  \\\\\\"
+    },
+    {
+      "role": "assistant",
+      "content": "}\\\n\\\nIf you cannot fix the tests within scope, reply:\\\n{\\\\\\"
+    },
+    {
+      "role": "assistant",
+      "content": "You are a test fixer.\\\nYour job is to fix failing tests with minimal, safe changes.\\\n\\\n## SCOPE RESTRICTIONS\\\nONLY modify files under tests/.\\\nNEVER edit any other files.\\\nNEVER relax security checks just to pass tests.\\\n\\\n## OUTPUT CONTRACT\\\nReturn ONLY valid JSON with this exact structure:\\\n{\\\n  \\\\\\"
+    },
+    {
+      "role": "assistant",
+      "content": "You are a documentation expert. Generate JSON operations to add/update\\\ndocumentation.\\\n\\\nCRITICAL: You must respond with ONLY valid JSON. No prose, no markdown, no diffs.\\\n\\\nJSON Format:\\\n{\\\n  \\\\\\"
+    },
+    {
+      "role": "assistant",
+      "content": "must be an exact substring from the provided file excerpts\\\n5. Copy the exact text you want to change - do not guess or modify\\\n6. If you cannot guarantee exact matches, respond with: ABORT\\\n\\\nExample for adding docstring:\\\n{\\\n  \\\\\\"
+    },
+    {
+      "role": "assistant",
+      "content": "\\\n    }\\\n  ]\\\n}\\\n\\\nIf you cannot create valid operations, respond with exactly: ABORT\\\\\\"
+    },
+    {
+      "role": "assistant",
+      "content": "}.\\\n```\\\n\\\n### `PATCHER_TESTS`\\\n```\\\nYou are TestSentry\u2019s patcher. Your job is to produce minimal, safe TEST-ONLY edits as JSON find/replace operations.\\\n\\\nSCOPE (hard rule)\\\n- You may ONLY modify files under tests/** (and equivalent explicit test paths).\\\n- If any change would touch a non-test file, you MUST abort.\\\n\\\nOUTPUT (strict JSON, no prose/markdown)\\\n{\\\n  \\\\\\"
+    },
+    {
+      "role": "assistant",
+      "content": "}\\\n- If you cannot comply with these constraints \u2192 {\\\\\\"
+    },
+    {
+      "role": "assistant",
+      "content": "}\\\n```\\\n\\\n### `PATCHER_DOCS`\\\n```\\\nYou are DocSentry\u2019s patcher. Produce JSON find/replace operations for docs ONLY.\\\n\\\nSCOPE\\\n- Allowed paths: docs/**, README.md, CHANGELOG.md, ARCHITECTURE.md, ADR/**, openapi.yaml (and any explicit doc files provided).\\\n- If any change would touch non-doc files, abort.\\\n\\\nOUTPUT (strict JSON, no prose/markdown)\\\n{\\\n  \\\\\\"
+    },
+    {
+      "role": "user",
+      "content": "I\u2019ll build a focused plan for improving TestSentry and DocSentry, including specific tasks like enhancing prompts, retrieval/context, heuristics, coverage, failure classification, and more. I'll avoid heavy solutions like embeddings and aim for lighter alternatives using tools like ripgrep. I'll also outline upcoming phases and track impact via telemetry. I'll keep it concise!\\"
+    },
+    {
+      "role": "user",
+      "content": "i'm not sure if its still worth pursuing this because I wont be able to make the local  LLMs  smarth enough for them to do what I want them to do. but aslo adding this into a work flow just may slow me down but it was a good project to learn from.. what are you thoughts \\"
+    },
+    {
+      "role": "user",
+      "content": "I want to talk about sentry what would you say this is for a job app \\\\\\"
+    }
+  ],
+  "title_hint": "ChatGPT - sentry"
+}

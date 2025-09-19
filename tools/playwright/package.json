@@ -1,0 +1,12 @@
+{
+  "name": "chat2substack",
+  "version": "1.0.0",
+  "description": "Convert ChatGPT conversations to Substack drafts",
+  "scripts": {
+    "playwright:install": "playwright install",
+    "playwright:test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0"
+  }
+}

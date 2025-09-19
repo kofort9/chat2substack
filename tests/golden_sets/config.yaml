@@ -1,0 +1,60 @@
+# Golden Set Testing Configuration
+
+# Test execution settings
+test_settings:
+  max_retries: 3
+  timeout_seconds: 30
+  parallel_execution: false
+
+# Quality thresholds
+quality_thresholds:
+  min_word_count: 300
+  max_word_count: 900
+  min_title_length: 10
+  max_title_length: 80
+  min_dek_length: 20
+  max_dek_length: 200
+  min_tldr_points: 3
+  max_tldr_points: 5
+  min_tags: 3
+  max_tags: 6
+
+# Content structure requirements
+structure_requirements:
+  require_sections: true
+  require_lists: true
+  require_intro: true
+  require_conclusion: true
+
+# Content type specific requirements
+content_type_requirements:
+  technical_journal:
+    require_problem_statement: true
+    require_solution_details: true
+    require_technical_stack: true
+    require_results: true
+  
+  research_article:
+    require_research_question: true
+    require_methodology: true
+    require_findings: true
+    require_implications: true
+  
+  critique:
+    require_subject_identification: true
+    require_balanced_analysis: true
+    require_evidence: true
+    require_recommendations: true
+
+# Test data directories
+test_directories:
+  technical_journal: "tests/golden_sets/technical_journal"
+  research_article: "tests/golden_sets/research_article"
+  critique: "tests/golden_sets/critique"
+
+# Output settings
+output:
+  report_file: "tests/golden_sets/test_report.md"
+  detailed_logs: true
+  save_actual_outputs: true
+  output_directory: "tests/golden_sets/outputs"

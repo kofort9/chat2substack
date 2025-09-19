@@ -1,0 +1,53 @@
+{
+  "name": "Sentry Integration Technical Journal",
+  "description": "Test case for technical journal summarizer using Sentry integration conversation",
+  "content_type": "technical_journal",
+  "expected_metrics": {
+    "has_title": true,
+    "has_dek": true,
+    "has_tldr": true,
+    "has_tags": true,
+    "has_body": true,
+    "title_valid": true,
+    "dek_valid": true,
+    "tldr_valid": true,
+    "tags_valid": true,
+    "body_word_count_valid": true,
+    "has_sections": true
+  },
+  "messages": [
+    {
+      "role": "user",
+      "content": "I'm working on building a Sentry integration for my local LLM-powered test and documentation automation system. I need to set up error tracking and monitoring for the pipeline."
+    },
+    {
+      "role": "assistant", 
+      "content": "That's a great project! Sentry integration for LLM systems is crucial for monitoring and debugging. Let me help you set this up. First, you'll need to install the Sentry SDK and configure it for your Python environment."
+    },
+    {
+      "role": "user",
+      "content": "I'm using Ollama for local LLM hosting and LiteLLM as an API compatibility layer. How should I integrate Sentry with this setup?"
+    },
+    {
+      "role": "assistant",
+      "content": "For your Ollama + LiteLLM setup, you'll want to add Sentry at multiple levels: 1) Application level for general errors, 2) LLM API level for model-specific issues, and 3) Pipeline level for workflow monitoring. Here's how to structure it..."
+    },
+    {
+      "role": "user",
+      "content": "I'm also using Docker for containerization and GitHub Actions for CI/CD. Should I add Sentry to the containers and CI pipeline too?"
+    },
+    {
+      "role": "assistant",
+      "content": "Absolutely! For a complete monitoring setup, you should integrate Sentry at: 1) Container level - add Sentry to your Docker containers, 2) CI/CD level - monitor build and deployment failures, 3) Runtime level - track application errors and performance. This gives you full visibility across your entire stack."
+    },
+    {
+      "role": "user",
+      "content": "What about testing? I'm using Pytest for my test suite. How can I integrate Sentry with my tests?"
+    },
+    {
+      "role": "assistant",
+      "content": "Great question! For testing integration, you can: 1) Use Sentry's test context to track test runs, 2) Monitor test failures and flaky tests, 3) Set up alerts for test suite health, 4) Track performance metrics for your LLM calls during testing. This helps ensure your system is reliable and performant."
+    }
+  ],
+  "title_hint": "Building Sentry Integration for Local LLM Pipeline"
+}

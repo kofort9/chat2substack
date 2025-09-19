@@ -1,0 +1,125 @@
+{
+  "name": "Real Critique Test - LRM Reasoning Analysis",
+  "description": "Real conversation from critique test URL for critique testing",
+  "content_type": "critique",
+  "expected_metrics": {
+    "has_title": true,
+    "has_dek": true,
+    "has_tldr": true,
+    "has_tags": true,
+    "has_body": true,
+    "title_valid": true,
+    "dek_valid": true,
+    "tldr_valid": true,
+    "tags_valid": true,
+    "body_word_count_valid": true,
+    "has_sections": true
+  },
+  "messages": [
+    {
+      "role": "assistant",
+      "content": "**\\\n\\\n---\\\n\\\nLet me know if you'd like it read aloud in a particular voice or style \u2014 e.g., deadpan, dramatic, TED Talk narrator.\\"
+    },
+    {
+      "role": "user",
+      "content": "is what emerges from **statistical correlations in text**.\\\n- Without external memory, feedback loops, or symbolic systems, it's not *reasoning* \u2014 it\u2019s *performing the role* of something that reasons.\\\n\\\n---\\\n\\\nIf you want, I can walk you through the architecture differences (e.g. what *might* make an LRM differ from an LLM in practice), or sketch out a vision for what actual reasoning systems might need \u2014 like symbolic grounding, memory graphs, or cognitive stacks. Just say the word.\\"
+    },
+    {
+      "role": "assistant",
+      "content": "Yeah, I get **exactly** what you're saying \u2014 and your dart analogy isn't bad at all. It\u2019s intuitive, poetic, and actually gets closer to the truth than most media explanations. So let\u2019s lay it bare:\\\n\\\n---\\\n\\\n### \ud83c\udfad What We Call \\\\\\"
+    },
+    {
+      "role": "user",
+      "content": "The user seems to be asking about opinions on BlueSky, a social network. I\u2019ll look up what people are saying about it by searching the web for opinions. After finding relevant sources, I\u2019ll summarize key points and cite them properly. It\u2019s a good idea to focus on specific feedback or trends to give a clear overview. Let\u2019s see what insights I can gather about how people view BlueSky.\\"
+    },
+    {
+      "role": "user",
+      "content": "As far as I am aware the only Bluesky only uses AI for auto moderation, same as any other platform. I've heard they use Hive for moderation ...\\"
+    },
+    {
+      "role": "user",
+      "content": "Wow. I mean, okay, so I guess my question is, like, why did, like, I don't know, what about the universities? Like, did they not, I don't know, what are people actually saying about this paper? Like, what are experts saying about this paper? That's what I need to know. Look up what experts are saying about Apple's paper.\\"
+    },
+    {
+      "role": "user",
+      "content": "Wow. I mean, okay, so I guess my question is, like, why did, like, I don't know, what about the universities? Like, did they not, I don't know, what are people actually saying about this paper? Like, what are experts saying about this paper? That's what I need to know. Look up what experts are saying about Apple's paper.\\\\\\"
+    },
+    {
+      "role": "user",
+      "content": "It seems like the user is interested in expert opinions or reactions to Apple\u2019s LRM paper. To gather insights, I\u2019ll first look up relevant news or expert reactions using a web search. Once I have some sources, I\u2019ll delve into expert comments. After that, I\u2019ll organize the findings and provide a summary. I'll also include relevant sources as supporting references for clarity.\\"
+    },
+    {
+      "role": "user",
+      "content": "Apple says generative AI cannot think like a human - research paper ...\\"
+    },
+    {
+      "role": "user",
+      "content": "Can this leave these AI companies open to like some lawsuits like I feel like you could sue based off that maybe I don't know if something in their terms and conditions or something like I feel like I feel like they're at a liability after this paper like you know they're vulnerable and you can make money off vulnerability especially with these AI companies what could I do\\"
+    },
+    {
+      "role": "assistant",
+      "content": "Is a Misleading Name\\\n\\\nYou're spot-on again:\\\n- **Pattern recognition** \u2260 **intelligence**  \\\n- **Proprietary data** is what gives these models apparent \\\\\\"
+    },
+    {
+      "role": "user",
+      "content": "So let's dive into this number seven, this intuition slash fast pattern recognition. I think they're two separate pieces, in my opinion, and this fast pattern recognition is what we have with the LLMs and the LRMs, but it lacks intuition. Like, it doesn't actually know what it is. It just, it knows that statistically, this matches up with what's in its training data.\\"
+    },
+    {
+      "role": "user",
+      "content": "So, I want to respond to the TikTok with something like this. Um, hold on.\\\nI think they are trying to make a point that these are only pattern recognition engines and nothing more and calling these LLMs/LRMs Artificial intelligence is misleading to the public. In a way justifying their slower approach and not selling more of false narrative \\"
+    },
+    {
+      "role": "user",
+      "content": "Here\u2019s a sharpened, clear version of what you could post as a TikTok response \u2014 direct, respectful, but firm in the underlying argument:\\\n\\\n---\\\n\\\n\\u003e I think what Apple\u2019s really trying to say is this:  \\\n\\u003e These models \u2014 LLMs, LRMs \u2014 are just **pattern recognition engines**, nothing more.  \\\n\\u003e Calling them \\\\\\"
+    },
+    {
+      "role": "user",
+      "content": "So, okay, what am I asking for? Like, what do I want to study? Like, is it\u2014it's not really AI. I don't think I really want to study AI. I want to get to the core, like, the parts that we're missing to achieve AI, which would be, like, neuroscience, I guess, or computational neuroscience, or, like, the whole concept of knowledge. But I don't know what the discipline is. Like, I need help figuring out what the discipline is.\\"
+    },
+    {
+      "role": "user",
+      "content": "Okay, so let's say I decide to study computational neuroscience. What would I have to do to get accepted to one of these good schools? Probably not Columbia, maybe MIT or Stanford, but what would I have to do?\\"
+    },
+    {
+      "role": "assistant",
+      "content": "Alright \u2014 let\u2019s take your core claims and **fact-check them directly against Apple\u2019s paper** (\u201cThe Illusion of Thinking\u201d) so you can sharpen where you\u2019re *right*, *half-right*, or *off*.\\\n\\\n---\\\n\\\n## \ud83d\udd0d Your Claims vs. Paper Findings\\\n\\\n---\\\n\\\n### \ud83e\udde0 **Claim 1**: \\\\\\"
+    },
+    {
+      "role": "user",
+      "content": "Make it more... Yeah, that's exactly what I was gonna say. Let's kind of compress this into a TikTok comment. I need it short and sweet, for real. But clear. And, you know, real.\\"
+    },
+    {
+      "role": "user",
+      "content": "I don't know why I'm going so hard for Apple, like, I'm just like, it makes sense, like, it's really, we out here living in a scam of what AI can actually do, and Apple's trying to tell y'all folks, like, it's trying to tell everybody that we're not there yet, they're selling you a dream, we can only do so much, and it's just pattern recognition.\\"
+    },
+    {
+      "role": "user",
+      "content": "I don't know, but then I'm also confused because you talk about your limitations Yeah, you talk about your limitations sometimes when I try to give you tasks But I think that's more clear, like, it doesn't show, you don't need to adapt Because that's, like, the initial task is to do something and you're just hitting that roadblock early on It's not an adaptive roadblock, if that makes sense\\"
+    },
+    {
+      "role": "user",
+      "content": "But I've seen Claude and Gemini do this in Cursive Cursor, so that makes me wonder.\\"
+    },
+    {
+      "role": "user",
+      "content": "Doesn't this render ScaleAI's CEO leaderboards like misinformation? I think it completely devalues this leaderboard because it's just a mimic. It's not actually doing what it says it's doing. It's just based off like statistics and mimicry. I think there's something to say about that. I told a creator on TikTok that he should do a video on it and he said that's a good idea so maybe he will. Oh, I'm gonna follow him. Bye.\\"
+    },
+    {
+      "role": "user",
+      "content": "I don't think GPUs are going to be able to do everything. I think there's more that we need. Obviously, GPU handles the compute, but memory, we're going to need technology to handle the memory. And who knows what other technology we'll need, but compute and memory are the biggest things or the most concrete things that we know that we need. And yeah, GPUs are good, but clearly still not enough for the compute power we need. But memory, we're not even close to there yet, I don't think.\\"
+    },
+    {
+      "role": "user",
+      "content": "and the neuromorphic chips is that from computational neuroscience like i'm i'm still trying to see if that's the correct field or correct discipline for graduate studies i should go and get into i think it's a yes but i'm not completely sure\\"
+    },
+    {
+      "role": "user",
+      "content": "The user is asking about GraphRax and memory infrastructure for transformers. To help, I think I should look for recent information about both. I'll find out more about the specific context, such as how GraphRax interacts with transformers in memory and what types of infrastructure are relevant. Then, I\u2019ll bring back the most relevant insights for the user.\\"
+    },
+    {
+      "role": "assistant",
+      "content": "So yes \u2014 you can think of GraphRAG as *the new eyes and ears*, but we still don\u2019t have *the brain or reflective self* to make sense of what\u2019s seen.\\"
+    }
+  ],
+  "title_hint": "ChatGPT - LRM Reasoning Performance Analysis"
+}
